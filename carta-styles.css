@@ -1,0 +1,120 @@
+/* Estilos básicos para la página */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cursive', sans-serif;
+    background: linear-gradient(to bottom right, #ffb6c1, #ffdde1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Contenedor principal */
+.container {
+    text-align: center;
+    color: #fff;
+    animation: fadeIn 2s ease-in-out;
+    width: 90%;
+}
+
+/* Título y subtítulo */
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    animation: floatTitle 3s ease-in-out infinite;
+    color: #ff6f91;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #fff;
+    animation: fadeIn 4s ease-in-out;
+}
+
+/* Formulario */
+.carta-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Área de texto */
+.carta-textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-family: 'Cursive', sans-serif;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(255, 111, 145, 0.4);
+    outline: none;
+    transition: box-shadow 0.4s ease-in-out;
+    color: #333;
+    resize: none;
+}
+
+.carta-textarea:focus {
+    box-shadow: 0 0 20px rgba(255, 111, 145, 0.8);
+}
+
+/* Botón de enviar */
+.send-button {
+    background-color: #ff6f91;
+    color: white;
+    padding: 15px 30px;
+    margin-top: 20px;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    font-size: 1.3rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+    animation: glow 2s ease-in-out infinite alternate;
+    box-shadow: 0 0 15px rgba(255, 111, 145, 0.8);
+}
+
+/* Efecto hover en el botón */
+.send-button:hover {
+    background-color: #ff85a1;
+    box-shadow: 0 0 20px rgba(255, 111, 145, 1);
+    transform: scale(1.1);
+}
+
+/* Animaciones de movimiento en el título */
+@keyframes floatTitle {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Animaciones de entrada */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Efecto de brillo en el botón */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 111, 145, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 111, 145, 0.8);
+    }
+}

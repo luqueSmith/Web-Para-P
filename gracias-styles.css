@@ -1,0 +1,123 @@
+/* Estilos básicos */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cursive', sans-serif;
+    background: linear-gradient(to bottom right, #ffb6c1, #ffdde1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Contenedor principal */
+.container {
+    text-align: center;
+    color: #fff;
+    animation: fadeIn 2s ease-in-out;
+    width: 90%;
+}
+
+/* Título y subtítulo */
+.title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: floatTitle 3s ease-in-out infinite;
+    color: #ff6f91;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #fff;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Mensaje de agradecimiento */
+.message {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-top: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Animación del corazón */
+.heart-animation {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation: pulse 2s infinite;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background: #ff6f91;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50px;
+}
+
+.heart::before {
+    left: 0;
+    top: -50px;
+}
+
+.heart::after {
+    top: -50px;
+    left: 50px;
+}
+
+.heart::before,
+.heart::after,
+.heart {
+    transform: rotate(-45deg);
+}
+
+/* Animaciones del corazón y el título */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes floatTitle {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
