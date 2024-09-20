@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escribir una Carta</title>
+    <link rel="stylesheet" href="carta-styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Escribe tu Carta Aqui </h1>
+        <p class="subtitle">Esta Carta llegara directamente a mi correo 😸</p>
+        <form action="https://formsubmit.co/luquesmith537@gmail.com" method="POST" class="carta-form">
+            <!-- Campo oculto para redirigir tras el envío -->
+            <input type="hidden" name="_next" value="gracias.html">
+            <!-- Campo oculto para evitar spam -->
+            <input type="hidden" name="_captcha" value="false">
+            <!-- Área de texto para la carta -->
+            <textarea name="carta" class="carta-textarea" placeholder="Para Smith..." rows="10" required></textarea>
+            <!-- Botón de enviar -->
+            <button type="submit" class="send-button">Enviar Carta</button>
+        </form>
+    </div>
+</body>
+</html>
